@@ -1,0 +1,25 @@
+[project]
+name = "whatsapp-reminder"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "celery[redis,timezone]>=5.5.3",
+    "cryptography>=45.0.6",
+    "fastapi[all]>=0.115.12",
+    "httpx>=0.28.1",
+    "langgraph>=0.5.2",
+    "logfire>=3.24.0",
+    "openai>=1.87.0",
+    "openai-agents>=0.1.0",
+    "psycopg2-binary>=2.9.10",
+    "pydantic-ai>=0.4.1",
+    "python-dotenv>=1.1.0",
+    "pytz>=2025.2",
+    "redis>=5.2.1",
+    "requests>=2.32.4",
+    "sqlalchemy>=2.0.41",
+    "sqlalchemy-utils>=0.41.2",
+    "uvicorn>=0.34.3",
+]
