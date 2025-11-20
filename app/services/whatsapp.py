@@ -12,7 +12,7 @@ class WhatsAppService:
     def __init__(
         self,
         access_token: str = WHATSAPP_ACCESS_TOKEN,
-        phone_id: str = whatsapp_phone_id,
+        phone_id: str = WHATSAPP_PHONE_ID,
         api_version: str = "v18.0",
         timeout_sec: float = 10.0,
         max_retries: int = 3,
@@ -92,7 +92,8 @@ class WhatsAppService:
         resp = self.session.post(url, headers=self._headers(), json=payload, timeout=self.timeout_sec)
         if resp.status_code == 200:
             return True
-        
+
+        print(f"[WhatsApp] Send reminder error {resp.status_code}: {resp.text}")
         return False
 
 
