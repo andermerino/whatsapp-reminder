@@ -40,7 +40,7 @@ class Reminder(Base):
     
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("user.id"))
-    text = Column(Text)
+    text = Column(StringEncryptedType(UnicodeText, FERNET_KEY, FernetEngine), nullable=False)
     date = Column(Date)
     hour = Column(Time)
     send = Column(Boolean, default=False)

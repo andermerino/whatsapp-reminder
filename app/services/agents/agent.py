@@ -91,11 +91,6 @@ def get_user_phone_number(ctx: RunContext) -> str:
 def get_user_email(ctx: RunContext) -> str:
     return ctx.deps.email
 
-@agent.tool
-def get_user_birth_date(ctx: RunContext) -> date:
-    return ctx.deps.birth_date
-
-
 
 @agent.tool
 def get_conversation_context(ctx: RunContext) -> List[Dict[str, Any]]:

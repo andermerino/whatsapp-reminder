@@ -99,14 +99,6 @@ class WhatsAppService:
 
 _client = WhatsAppService()
 
-def send_message(user_number: str, text: str) -> bool:
-    """
-    Convenience function that delegates to the reusable client.
-    """
-    return _client.send_text(user_number, text)
-
-
-
 def send_whatsapp_message(user_number: str, text: str):
     """
       🛈 Enviar mensaje de basico de Whatsapp
